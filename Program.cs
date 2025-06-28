@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Generic
 
 namespace TodoApp
 {
@@ -56,8 +56,18 @@ namespace TodoApp
             static void AddTask()
             {
                 // TODO: implementacja dodawania zadania
-                Console.WriteLine("[Dodawanie zadania - funkcja w trakcie implementacji]");
+                Console.Write("Podaj opis nowego zadania: ");
+                string newTask Console.ReadLine();
+                if (string.IsNullOrwhiteSpace(newTask))
+                {
+                    Console.WriteLine("Opis zadania nie może być pusty. Przerwano dodawanie.");
+                    return;
+                }
+                tasks.Add(newTask);
+                completed.Add(false);
+                Console.WriteLine($"Dodano zadanie: {newTask}");
             }
+
 
             static void ListTasks()
             {
