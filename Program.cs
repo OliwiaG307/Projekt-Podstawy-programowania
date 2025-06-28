@@ -116,6 +116,7 @@ namespace TodoApp
                     Console.WriteLine("Brak zadań na liście. Nie ma czego usuwać.");
                     return;
                 }
+
                 Console.WriteLine("Które zadanie usunąć? Wybierz numer:");
                 for (int i = 0; i < tasks.Count; i++)
                 {
@@ -138,8 +139,11 @@ namespace TodoApp
                     return;
                 }
 
+                string removedTask = tasks[index];
+                tasks.RemoveAt(index);
+                completed.RemoveAt(index);
+                Console.WriteLine($"Usunięto zadanie: \"{removedTask}"");
 
-              
             }
 
         }
