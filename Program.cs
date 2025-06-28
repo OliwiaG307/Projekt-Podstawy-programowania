@@ -72,7 +72,21 @@ namespace TodoApp
             static void ListTasks()
             {
                 // TODO: implementacja wyświetlania zadań
-                Console.WriteLine("[Wyświetlanie zadań - funkcja w trakcie implementacji]");
+                
+                if (tasks.Count == 0)
+                {
+                    Console.WriteLine("Lista zadań jest pusta.");
+                }
+                else
+                {
+                    Console.WriteLine("Lista zdań:");
+                    for (int i = 0; i < tasks.Count; int++)
+                    {
+                        string status = completed[i] ? "[X]" : "[ ]";
+                        Console.WriteLine($"{i + 1}. {status} {tasks[i]}");
+                    }
+                }
+            
             }
 
             static void CompleteTask()
