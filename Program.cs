@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic
 
 namespace TodoApp
 {
@@ -6,7 +7,52 @@ namespace TodoApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            static List<string> tasks = new List<string>();     // lista opisów zadań
+            static List<bool> completed = new List<bool>();     // równoległa lista statusów (false = nieukończone, true = ukończone)
+
+            static void Main(string[] args)
+            {
+                bool exit = false;
+                while (!exit)
+                {
+                    // Wyświetlenie menu
+                    Console.WriteLine("==== MENU ====");
+                    Console.WriteLine("1. Dodaj nowe zadanie");
+                    Console.WriteLine("2. Wyświetl listę zadań");
+                    Console.WriteLine("3. Oznacz zadanie jako ukończone");
+                    Console.WriteLine("4. Usuń zadanie");
+                    Console.WriteLine("5. Zakończ program");
+                    Console.WriteLine("Wybierz opcję (1-5):");
+
+                    string choice = Console.ReadLine();
+                    Console.WriteLine(); // pusta linia dla czytelności
+
+                    switch (choice)
+                    {
+                        case "1":
+                            AddTask();
+                            break;
+                        case "2":
+                            ListTasks();
+                            break;
+                        case "3":
+                            CompleteTask();
+                            break;
+                        case "4":
+                            RemoveTask();
+                            break;
+                        case "5":
+                            Console.WriteLine("Koniec działania programu.");
+                            exit = true;
+                            break;
+                        default:
+                            Console.WriteLine("Nieprawidłowy wybór, spróbuj ponownie.");
+                            break;
+                    }
+                }
+            }
+
+            
         }
     }
-}
+
