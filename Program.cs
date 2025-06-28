@@ -48,11 +48,35 @@ namespace TodoApp
                         default:
                             Console.WriteLine("Nieprawidłowy wybór, spróbuj ponownie.");
                             break;
+
                     }
                 }
             }
 
-            
+            static void AddTask()
+            {
+                // TODO: implementacja dodawania zadania
+                Console.WriteLine("[Dodawanie zadania - funkcja w trakcie implementacji]");
+            }
+
+            static void ListTasks()
+            {
+                // TODO: implementacja wyświetlania zadań
+                Console.WriteLine("[Wyświetlanie zadań - funkcja w trakcie implementacji]");
+            }
+
+            static void CompleteTask()
+            {
+                // TODO: implementacja oznaczania ukończenia zadania
+                Console.WriteLine("[Oznaczanie ukończenia - funkcja w trakcie implementacji]");
+            }
+
+            static void RemoveTask()
+            {
+                // TODO: implementacja usuwania zadania
+                Console.WriteLine("[Usuwanie zadania - funkcja w trakcie implementacji]");
+            }
+
         }
     }
 
